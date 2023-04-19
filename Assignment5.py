@@ -7,15 +7,10 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score
-
-
 
 # In[2]:
+from sklearn.model_selection import train_test_split
+
 data = pd.read_csv("C:\\Users\\adity\\Downloads\\Crowdsourced Mapping\\training.csv");
 X = data.drop(['class'], axis=1)
 y = data["class"]
@@ -44,7 +39,9 @@ param_grid = {
 
 
 # In[4]:
-
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import accuracy_score
 
 best_params_list = []
 accuracy_list = []
@@ -92,6 +89,8 @@ df_best_params.columns = ['Epsilon', 'Nu', 'Kernel','Best  Accuracy']
 
 
 # In[8]:
+import matplotlib.pyplot as plt
+
 print("Table: Best Parameters")
 print(df_best_params)
 

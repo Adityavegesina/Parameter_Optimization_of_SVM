@@ -22,5 +22,5 @@ Best Parameters:
 
 Kernel: rbf
 Nu: 0.13
-Epsilon: 0.34
+Epsilon: 0.32
 
